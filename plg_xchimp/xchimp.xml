@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="plugin" group="user">
+	<name>plg_user_xchimp</name>
+	<author>Parvez Akther</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>(C) 2010 - 2014 ThemeXpert. Updated 2025 by Brett.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>info@themexpert.com</authorEmail>
+	<authorUrl>https://www.themexpert.com</authorUrl>
+	<version>2.0</version>
+  <namespace path="src">Themexpert\Plugin\User\Xchimp</namespace>
+	<description>PLG_USER_XCHIMP_XML_DESCRIPTION</description>
+	<files>
+		<folder plugin="xchimp">services</folder>
+    <folder>src</folder>
+		<folder>lib</folder>
+    <folder>language</folder>
+	</files>
+  <languages folder="language">
+		<language tag="en-GB">en-GB/plg_user_xchimp.ini</language>
+		<language tag="en-GB">en-GB/plg_user_xchimp.sys.ini</language>
+    <language tag="fr-FR">fr-FR/plg_user_xchimp.ini</language>
+		<language tag="fr-FR">fr-FR/plg_user_xchimp.sys.ini</language>
+	</languages>
+
+  <config>
+		<fields name="params" addfieldprefix="Themexpert\Plugin\User\Xchimp\Field">
+
+			<fieldset name="basic">
+
+        <field name="note" type="note"
+          label="PLG_USER_XCHIMP_NOTE_LABEL"
+          description="PLG_USER_XCHIMP_NOTE_DESC"
+          inlineHelp="true"
+          class="alert alert-info"
+        />
+
+				<field name="apikey" type="text" 
+          class="form-control"	
+          label="PLG_USER_XCHIMP_FIELD_APIKEY"  
+          description="PLG_USER_XCHIMP_FIELD_APIKEY_DESC"
+        />
+
+        <field name="listid" type="mailchimplists"
+          label="PLG_USER_XCHIMP_FIELD_LISTID"
+          description="PLG_USER_XCHIMP_FIELD_LISTID_DESC" 
+        />
+
+        <field name="double_optin" type="radio"
+          label="PLG_USER_XCHIMP_FIELD_DOUBLE_OPTIN"
+          description="PLG_USER_XCHIMP_FIELD_DOUBLE_OPTIN_DESC"
+          class="btn-group"
+          layout="joomla.form.field.radio.switcher"
+            default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="welcome_email" type="radio"
+          label="PLG_USER_XCHIMP_FIELD_WELCOME_EMAIL"
+          description="PLG_USER_XCHIMP_FIELD_WELCOME_EMAIL_DESC"
+          class="btn-group"
+          layout="joomla.form.field.radio.switcher"
+          default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="tags" type="text"
+          class="form-control"
+          label="PLG_USER_XCHIMP_FIELD_TAGS"
+          description="PLG_USER_XCHIMP_FIELD_TAGS_DESC"
+        />
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>
